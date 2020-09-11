@@ -1,50 +1,91 @@
 body {
-    height: 100%;
-    z-index: 0;
     margin: 0;
 }
+:root{
+	--ci1: #33658A;
+	--ci2: #86BBD8;
+    --ci3: #758E4F;
+    --ci4: #F6AE2D;
+    --ci5: #F26419;
+	--link: var(--ci1);
+	--link-hover: var(--ci2);
+	--btn-bg: var(--ci1);
+	--btn-bg-hover: var(--ci2);
+	--nav-link: var(--ci1);
+	--nav-hover: var(--ci2);
+	--bg-color: #fff;
+	--text-color: #333;
+	--box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 2px 4px 0 rgba(0,0,0,.08);
+	--round: 5px;
+	--pmr-font: "Sukhumvit Set",-apple-system, BlinkMacSystemFont,"HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--txt-font: var(--font-anuphan);
+	
+}
+#main_picture{
+    padding: 0 5em;
+    width: 300px;
+    transform: scale(1);
+    transition: all .5s;
+}
 
+.container{
+    display: flex;
+    /* flex-direction: column; */
+    /* flex: 1; */
+    width: 100%;
+    height: 100%;
+    /* flex-direction: row; */
+}
 .bg-sky {
     background-image: url(image/sky_bg.gif);
     background-repeat: no-repeat;
+    display: block;
     background-size: cover;
-    height: 85%;
-    z-index: -1;
+    height: 100%;
+    /* flex: 4; */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .bg-ground {
     background-image: url(image/dirt\ bg.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 15%;
-    z-index: -1;
-}
-
-.btn_first_choice {
+    display: block;
+    background-size: 200%;
+    background-position: 0% 50%;
+    height: 50%;
+    /* flex: 4; */
+    width: 100%;
     position: absolute;
-    top: 70vh;
-    left: 16vw;
-    background: #F1DABF;
-    width: 15vw;
-    height: 5vh;
-}
-
-.btn_second_choice {
-    position: absolute;
-    top: 70vh;
-    left: 60vw;
-    background: #F1DABF;
-    width: 15vw;
-    height: 5vh;
-}
-
-.character {
-    position: absolute;
-    top: 70vh;
-    left: 43vw;
-    width: 20vh;
+    left: 0;
+    bottom: 0;
+    transition: all 1s;
 }
 
 .hidden {
     opacity: 0;
+}
+
+.bg {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+div#contain {
+    display: flex;
+    margin: auto;
+    z-index: 100;
+    width: 800px;
+    justify-content: space-around;
+    align-items: center;
+}
+#main_picture.hid{
+    transform: scale(0) ;
+}
+.show{
+    transform: scale(1);
 }

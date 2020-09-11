@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://jabont.com/jayss/jayss2.css">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -11,30 +12,39 @@
 </head>
 
 <body>
+    <div class="container">
+        <div class="bg">
+            <div class="bg-sky"></div>
+            <div class="bg-ground"></div>
+        </div>
 
-    <div class="bg-sky"></div>
-    <div class="bg-ground"></div>
+        <div id="contain">
+            <button class="btn_choice btn size-l shadow" onclick="changeImg()" id="btn1">อยากมีเซลล์เดียว</button>
+            <img class="character" id="main_picture" src="image/monkey.png" alt="">
+            <button class="btn_choice btn size-l shadow">อยากมีหลายเซลล์</button>
 
-    <button class="btn_first_choice" onclick="changeImg()" id="btn1">อยากมีเซลล์เดียว</button>
-    <button class="btn_second_choice">อยากมีหลายเซลล์</button>
-    <img class="character" src="image/monkey.png" alt="" style="display: flex;">
+        </div>
 
+    </div>
 
+    <script>
+        function changeImg() {
+            image = document.querySelector('IMG.character');
+            image.classList.toggle("hid");
+            setTimeout(function () {
+                image.getAttribute('src');
+                image.setAttribute('src', 'image/human.png');
+                image.classList.toggle("hid");
+            }, 500)
+            document.querySelector(".bg-ground").style.backgroundPosition = "50% 50%"
+
+        }
+        $(document).ready(function () {
+            // $("#btn1").click(function () {
+            //     $(".character").fadeIn('slow');
+            // });
+        });
+    </script>
 </body>
 
 </html>
-<script>
-    function changeImg() {
-        image = document.querySelector('IMG.character');
-        image.style.display = 'none'
-        console.log(image.style.display)
-        image.getAttribute('src');
-        image.setAttribute('src', 'image/human.png');
-
-    }
-    $(document).ready(function() {
-        $("#btn1").click(function() {
-            $(".character").fadeIn('slow');
-        });
-    });
-</script>
