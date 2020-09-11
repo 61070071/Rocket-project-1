@@ -6,21 +6,35 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
+
     <div class="bg-sky"></div>
     <div class="bg-ground"></div>
-    <button class="btn_first_choice" onclick="changeImg()">อยากมีเซลล์เดียว</button>
+
+    <button class="btn_first_choice" onclick="changeImg()" id="btn1">อยากมีเซลล์เดียว</button>
     <button class="btn_second_choice">อยากมีหลายเซลล์</button>
-    <img class="character" src="image/monkey.png" alt="">
+    <img class="character" src="image/monkey.png" alt="" style="display: flex;">
+
+
 </body>
 
 </html>
 <script>
     function changeImg() {
-        image = document.querySelector('IMG');
+        image = document.querySelector('IMG.character');
+        image.style.display = 'none'
+        console.log(image.style.display)
         image.getAttribute('src');
         image.setAttribute('src', 'image/human.png');
+
     }
+    $(document).ready(function() {
+        $("#btn1").click(function() {
+            $(".character").fadeIn('slow');
+        });
+    });
 </script>
