@@ -1,0 +1,40 @@
+body{
+    height: 100%;
+    z-index:0;
+}
+.bg-sky{
+    background-image: url(image/sky.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 85%;
+    z-index:-1;
+}
+.bg-ground{
+    background-image: url(image/ground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15%;
+    z-index:-1;
+}
+.btn_first_choice{
+    position: absolute;
+    top: 70vh;
+    left: 16vw;
+    background: #F1DABF;
+    width: 15vw;
+    height: 5vh;
+}
+.btn_second_choice{
+    position: absolute;
+    top: 70vh;
+    left: 60vw;
+    background: #F1DABF;
+    width: 15vw;
+    height: 5vh;
+}
+.character{
+    position: absolute;
+    top: 70vh;
+    left: 43vw;
+    width: 20vh;
+}
