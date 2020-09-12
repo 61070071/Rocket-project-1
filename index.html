@@ -17,8 +17,11 @@
             <div class="bg-sky"></div>
             <div class="bg-ground"></div>
         </div>
-
+        <div id="text">
+             <p class="h7">กำลังเทส</p>
+        </div>
         <div id="contain">
+           
             <button class="btn_choice btn size-l shadow" onclick="changeImg()" id="btn1">อยากมีเซลล์เดียว</button>
             <img class="character" id="main_picture" src="image/monkey.png" alt="">
             <button class="btn_choice btn size-l shadow">อยากมีหลายเซลล์</button>
@@ -28,6 +31,29 @@
     </div>
 
     <script>
+        var character = {
+            "chr": [
+                {
+                    id: 1,
+                    name: "monkey",
+                    desc: "test1",
+                    name_img: "image/monkey.png"
+                },
+                {
+                    id: 2,
+                    name: "human",
+                    desc: "test2",
+                    name_img: "image/human.png"
+                },
+                {
+                    id: 3,
+                    name: "monkey",
+                    desc: "test",
+                    name_img: "image/monkey.png"
+                }
+            ]
+        }
+
         function changeImg() {
             image = document.querySelector('IMG.character');
             image.classList.toggle("hid");
