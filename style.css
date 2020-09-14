@@ -36,7 +36,7 @@ body {
     height: 100%;
     /* flex-direction: row; */
 }
-.bg-sky {
+#bg-sky {
     background-image: url(image/sky_bg.gif);
     background-repeat: no-repeat;
     display: block;
@@ -48,7 +48,7 @@ body {
     left: 0;
 }
 
-.bg-ground {
+#bg-ground {
     background-image: url(image/dirt\ bg.png);
     background-repeat: no-repeat;
     display: block;
