@@ -23,7 +23,7 @@
         <div id="contain">
            
             <button class="btn_choice btn size-l shadow" onclick="changeImg()" id="btn1">อยากมีเซลล์เดียว</button>
-            <img class="character" id="main_picture" src="image/monkey.png" alt="">
+            <img class="character" id="main_picture" src="image/australopithecus.png" alt="">
             <button class="btn_choice btn size-l shadow">อยากมีหลายเซลล์</button>
 
         </div>
@@ -32,34 +32,47 @@
 
     <script>
         var character = {
+            "count":"12",
             "chr": [
                 {
-                    id: 1,
+                    id: "1",
                     name: "monkey",
                     desc: "test1",
-                    name_img: "image/monkey.png"
+                    text1: "เซลเดียว",
+                    text2: "หลายเซล",
+                    name_img: "image/australopithecus.png"
                 },
                 {
-                    id: 2,
+                    id: "11",
                     name: "human",
                     desc: "test2",
-                    name_img: "image/human.png"
+                    text1: "เซลเดียว",
+                    text2: "หลายเซล",
+                    name_img: "image/homo_habillis.png"
                 },
                 {
-                    id: 3,
-                    name: "monkey",
+                    id: "12",
+                    name: "human_monkey",
                     desc: "test",
-                    name_img: "image/monkey.png"
+                    name_img: "image/homo_erectus.png"
                 }
             ]
         }
-
+        console.log()
         function changeImg() {
+            let data = character.count
+            let numReturn
             image = document.querySelector('IMG.character');
             image.classList.toggle("hid");
+            for (let i = 0; i < character.chr.length; i++) {
+                if (character.count == character.chr.id) {
+                    numReturn = i
+                }
+            }
+            console.log(numReturn)
             setTimeout(function () {
                 image.getAttribute('src');
-                image.setAttribute('src', 'image/human.png');
+                image.setAttribute('src', character.chr[numReturn].name_img);
                 image.classList.toggle("hid");
             }, 500)
             document.querySelector(".bg-ground").style.backgroundPosition = "50% 50%"

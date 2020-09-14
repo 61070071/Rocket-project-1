@@ -23,7 +23,7 @@ body {
 }
 #main_picture{
     padding: 0 5em;
-    width: 300px;
+    height: 40vh;
     transform: scale(1);
     transition: all .5s;
 }
