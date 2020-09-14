@@ -32,6 +32,7 @@
 
     <script>
         let num = 0
+        let road = 0
         var character = {
             "chr": [
                 {
@@ -64,6 +65,7 @@
         function changeImg() {
             
             num++
+            road+=50
             center_text.style.opacity = 0
             image = document.querySelector('IMG.character');
             image.classList.toggle("hid");
@@ -74,7 +76,7 @@
                 btn2.innerHTML = character.chr[num].text2 + ""
                 image.classList.toggle("hid");
             }, 500)
-            document.querySelector("#bg-ground").style.backgroundPosition = "50% 50%"
+            document.querySelector("#bg-ground").style.backgroundPosition = road+"% 50%"
             
             setTimeout(function () {
                 center_text.style.opacity = 100
