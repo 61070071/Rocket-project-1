@@ -95,7 +95,6 @@ let num = 0
             setTimeout(function () {
                 image.getAttribute('src');
                 image.setAttribute('src', character.chr[num].name_img);
-                ImgSize()
                 btn1.innerHTML = character.chr[num].text1 + ""
                 btn2.innerHTML = character.chr[num].text2 + ""
                 image.classList.toggle("hid");
@@ -107,15 +106,7 @@ let num = 0
             }, 500)
 
         }
-        ImgSize()
-        function ImgSize(){
-            if (main_picture.width >= 500) {
-                main_picture.style.height = "11vh"
-            }
-            else{
-                main_picture.style.height = "40vh"
-            }
-        }
+
         // $(document).ready(function () {
             // $("#btn1").click(function () {
             //     $(".character").fadeIn('slow');
