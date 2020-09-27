@@ -12,6 +12,10 @@
 </head>
 
 <body onload="sizeimg()">
+    <div style="position: absolute; z-index: 1;">
+        <div id="cloud1"></div>
+        <div id="cloud2"><img src="image/cloud.svg" alt=""></div>
+    </div>
     <div class="container">
         <div class="bg">
             <div id="bg-sky"></div>
@@ -23,9 +27,10 @@
         <div id="contain">
 
             <button class="btn_choice btn size-l shadow" onclick="changeImg()" id="btn1">หาอาหารบนบก</button>
-                <img class="character" id="main_picture" src="image/Coelacanth.png" alt="">
+            <img class="character" id="main_picture" src="image/Coelacanth.png" alt="">
             <button class="btn_choice btn size-l shadow" id="btn2">หาอาหารในน้ำ</button>
         </div>
+
     </div>
     <script src="script.js"></script>
 </body>
