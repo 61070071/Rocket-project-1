@@ -11,7 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body onload="sizeimg()">
     <div class="container">
         <div class="bg">
             <div id="bg-sky"></div>
@@ -23,13 +23,10 @@
         <div id="contain">
 
             <button class="btn_choice btn size-l shadow" onclick="changeImg()" id="btn1">หาอาหารบนบก</button>
-            <img class="character" id="main_picture" src="image/Coelacanth.png" alt="">
+                <img class="character" id="main_picture" src="image/Coelacanth.png" alt="">
             <button class="btn_choice btn size-l shadow" id="btn2">หาอาหารในน้ำ</button>
-
         </div>
-
     </div>
-
     <script src="script.js"></script>
 </body>
 

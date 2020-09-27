@@ -23,7 +23,6 @@ body {
 }
 #main_picture{
     padding: 0 5em;
-    height: 40vh;
     transform: scale(1);
     transition: all 2s;
 }
@@ -52,7 +51,7 @@ body {
     background-image: url(image/pre-ground.jpg);
     background-repeat: no-repeat;
     display: block;
-    background-size: 200%;
+    background-size: 100%;
     background-position: 0% 50%;
     height: 40%;
     width: 100%;
@@ -61,6 +60,7 @@ body {
     bottom: 0;
     transition: all 2s;
 }
+
 .h7{
     transition: all 1s;
 }

@@ -1,5 +1,6 @@
 let num = 0
         let road = 0
+        document.getElementById("main_picture").height = 200
         var character = {
             "chr": [
                 {
@@ -8,7 +9,9 @@ let num = 0
                     desc: "test1",
                     text1: "กินอาหารแบบพืช",
                     text2: "กินอาหารเนื้อ",
-                    name_img: "image/Coelacanth.png"
+                    name_img: "image/Coelacanth.png",
+                    s_wh :"400",
+                    s_ht :"200"
                 },
                 {
                     id: 2,
@@ -16,7 +19,9 @@ let num = 0
                     desc: "test2",
                     text1: "เลี้ยงลูกด้วยนม",
                     text2: "ไม่เลี้ยงลูกด้วยนม",
-                    name_img: "image/Ichthyostegaa.png"
+                    name_img: "image/Ichthyostegaa.png",
+                    s_wh :"400",
+                    s_ht :"200"
                 },
                 {
                     id: 3,
@@ -24,7 +29,9 @@ let num = 0
                     desc: "test",
                     text1: "เหงื่อออกผิวหนัง",
                     text2: "เหงื่อออกอุ้งมือ",
-                    name_img: "image/Synapsids.png"
+                    name_img: "image/Synapsids.png",
+                    s_wh :"400",
+                    s_ht :"150"
                 },
                 {
                     id: 4,
@@ -32,7 +39,9 @@ let num = 0
                     desc: "test",
                     text1: "เหงื่อออกผิวหนัง",
                     text2: "เหงื่อออกอุ้งมือ",
-                    name_img: "image/eutherain.png"
+                    name_img: "image/eutherain.png",
+                    s_wh :"400",
+                    s_ht :"200"
                 },
                 
                 {
@@ -41,7 +50,9 @@ let num = 0
                     desc: "test",
                     text1: "เหงื่อออกผิวหนัง",
                     text2: "เหงื่อออกอุ้งมือ",
-                    name_img: "image/Primates.png"
+                    name_img: "image/Primates.png",
+                    s_wh :"400",
+                    s_ht :"200"
                 },
                 {
                     id: 6,
@@ -49,7 +60,9 @@ let num = 0
                     desc: "test",
                     text1: "-",
                     text2: "-",
-                    name_img: "image/australopithecus.png"
+                    name_img: "image/australopithecus.png",
+                    s_wh :"400",
+                    s_ht :"300"
                 },
                 {
                     id: 7,
@@ -57,7 +70,9 @@ let num = 0
                     desc: "test",
                     text1: "-",
                     text2: "-",
-                    name_img: "image/homo_habillis.png"
+                    name_img: "image/homo_habillis.png",
+                    s_wh :"400",
+                    s_ht :"300"
                 },
                 {
                     id: 8,
@@ -65,7 +80,9 @@ let num = 0
                     desc: "test",
                     text1: "-",
                     text2: "-",
-                    name_img: "image/homo_erectus.png"
+                    name_img: "image/homo_erectus.png",
+                    s_wh :"400",
+                    s_ht :"300"
                 },
                 {
                     id: 9,
@@ -73,7 +90,9 @@ let num = 0
                     desc: "test",
                     text1: "-",
                     text2: "-",
-                    name_img: "image/homo_neanderthalensis.png"
+                    name_img: "image/homo_neanderthalensis.png",
+                    s_wh :"400",
+                    s_ht :"300"
                 },
                 {
                     id: 10,
@@ -81,11 +100,15 @@ let num = 0
                     desc: "test",
                     text1: "-",
                     text2: "-",
-                    name_img: "image/homo_sapiens.png"
+                    name_img: "image/homo_sapiens.png",
+                    s_wh :"400",
+                    s_ht :"300"
                 }
             ]
         }
-        
+        function sizeimg(){
+            document.getElementById("main_picture").height = 150
+        }
         function changeImg() {
             num++
             road+=50
@@ -97,6 +120,7 @@ let num = 0
                 image.setAttribute('src', character.chr[num].name_img);
                 btn1.innerHTML = character.chr[num].text1 + ""
                 btn2.innerHTML = character.chr[num].text2 + ""
+                document.getElementById("main_picture").height = character.chr[num].s_ht
                 image.classList.toggle("hid");
             }, 500)
             document.querySelector("#bg-ground").style.backgroundPosition = road+"% 50%"
