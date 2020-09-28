@@ -13,7 +13,7 @@ let num = 0
                     text2: "กินอาหารเนื้อ",
                     name_img: "image/Coelacanth.png",
                     s_wh :"400",
-                    s_ht :"200"
+                    s_ht :"150"
                 },
                 {
                     id: 2,
@@ -23,7 +23,7 @@ let num = 0
                     text2: "ไม่เลี้ยงลูกด้วยนม",
                     name_img: "image/Ichthyostegaa.png",
                     s_wh :"400",
-                    s_ht :"200"
+                    s_ht :"160"
                 },
                 {
                     id: 3,
@@ -43,7 +43,7 @@ let num = 0
                     text2: "เหงื่อออกอุ้งมือ",
                     name_img: "image/eutherain.png",
                     s_wh :"400",
-                    s_ht :"200"
+                    s_ht :"150"
                 },
                 
                 {
@@ -110,7 +110,7 @@ let num = 0
         }
         // document.querySelector('div#description').onload = setDes();
         function sizeimg(){
-            document.getElementById("main_picture").height = 150
+            document.getElementById("main_picture").height = 130
         }
         function changeImg() {
             var posi_x = Math.floor(Math.random()* 10)
