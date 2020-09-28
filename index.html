@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://jabont.com/jayss/jayss2.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>That's How Human Begin</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body onload="sizeimg()">
-    <div style="position: absolute; z-index: 1;">
+    <div id="sky_obj">
         <div id="cloud1"></div>
         <div id="cloud2"></div>
     </div>
@@ -29,10 +29,13 @@
         </div>
 
         <div id="contain">
-
-            <button class="btn_choice btn size-l shadow" onclick="changeImg()" id="btn1">หาอาหารบนบก</button>
+            <button class="btn_choice btn size-l shadow" onclick="changeImg()" id="routeA">หาอาหารบนบก</button>
             <img class="character" id="main_picture" src="image/Coelacanth.png" alt="">
-            <button class="btn_choice btn size-l shadow" id="btn2">หาอาหารในน้ำ</button>
+            <button class="btn_choice btn size-l shadow" onclick="ending()" id="routeB">หาอาหารในน้ำ</button>
+
+            <div class="centered">
+                <button class="btn_choice btn size-l shadow" onclick="location.reload()" id="restart" style="display: none;">กลับไป ณ จุดเริ่มต้นของวิวัฒนาการ</button>
+            </div>
         </div>
 
     </div>
