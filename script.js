@@ -1,5 +1,7 @@
 let num = 0
         let road = 0
+        let vtc = 0
+        let hrz = 0
         var character = {
             "chr": [
                 {
@@ -85,8 +87,9 @@ let num = 0
                 }
             ]
         }
-        
+        document.querySelector('div#description').onload = setDes();
         function changeImg() {
+            var posi_x = Math.floor(Math.random()* 10)
             num++
             road+=50
             center_text.style.opacity = 0
@@ -107,8 +110,18 @@ let num = 0
 
         }
 
-        // $(document).ready(function () {
-            // $("#btn1").click(function () {
-            //     $(".character").fadeIn('slow');
-            // });
-        // });
+        setInterval(function(){
+            var posi_x = Math.floor(Math.random()* 100)
+            var posi_y = Math.floor(Math.random()* 30)
+            this.vtc = posi_y
+            this.hrz = posi_x
+            console.log('Randomize vertical = '+this.vtc)
+            console.log('Randomize horizontal = '+this.hrz)
+            }, 5000);
+
+            function setDes(){
+                this.vtc = Math.floor(Math.random()* 30) + 25
+                this.hrz = Math.floor(Math.random()* 70) + 25
+                document.querySelector('div#description').style.top = this.vtc + '%';
+                document.querySelector('div#description').style.left = this.hrz + '%';
+            }
