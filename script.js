@@ -108,14 +108,15 @@ let num = 0
                 }
             ]
         }
-        document.querySelector('div#description').onload = setDes();
+        // document.querySelector('div#description').onload = setDes();
         function sizeimg(){
             document.getElementById("main_picture").height = 150
         }
         function changeImg() {
             var posi_x = Math.floor(Math.random()* 10)
             num++
-            road+=50
+            road+=15
+            if (road < 140) {
             center_text.style.opacity = 0
             image = document.querySelector('IMG.character');
             image.classList.toggle("hid");
@@ -127,26 +128,27 @@ let num = 0
                 document.getElementById("main_picture").height = character.chr[num].s_ht
                 image.classList.toggle("hid");
             }, 500)
-            document.querySelector("#bg-ground").style.backgroundPosition = road+"% 50%"
-            
+                document.querySelector("#bg-ground").style.backgroundPosition = road+"% 50%"        
+            }
+
             setTimeout(function () {
                 center_text.style.opacity = 100
             }, 500)
 
         }
 
-        setInterval(function(){
-            var posi_x = Math.floor(Math.random()* 100)
-            var posi_y = Math.floor(Math.random()* 30)
-            this.vtc = posi_y
-            this.hrz = posi_x
-            console.log('Randomize vertical = '+this.vtc)
-            console.log('Randomize horizontal = '+this.hrz)
-            }, 5000);
+        // setInterval(function(){
+        //     var posi_x = Math.floor(Math.random()* 100)
+        //     var posi_y = Math.floor(Math.random()* 30)
+        //     this.vtc = posi_y
+        //     this.hrz = posi_x
+        //     console.log('Randomize vertical = '+this.vtc)
+        //     console.log('Randomize horizontal = '+this.hrz)
+        //     }, 5000);
 
-            function setDes(){
-                this.vtc = Math.floor(Math.random()* 30) + 25
-                this.hrz = Math.floor(Math.random()* 70) + 25
-                document.querySelector('div#description').style.top = this.vtc + '%';
-                document.querySelector('div#description').style.left = this.hrz + '%';
-            }
+        //     function setDes(){
+        //         this.vtc = Math.floor(Math.random()* 30) + 25
+        //         this.hrz = Math.floor(Math.random()* 70) + 25
+        //         document.querySelector('div#description').style.top = this.vtc + '%';
+        //         document.querySelector('div#description').style.left = this.hrz + '%';
+        //     }
