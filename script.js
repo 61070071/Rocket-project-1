@@ -108,8 +108,14 @@ var character = {
         ]
     }
     // document.querySelector('div#description').onload = setDes();
+
+
+
 function sizeimg() {
     document.getElementById("main_picture").height = 130
+    setTimeout(function() {
+        document.getElementById('intro').style.opacity = 100
+    }, 500)
 }
 
 function changeImg() {
@@ -162,6 +168,7 @@ function ending() {
         document.getElementById('main_picture').style.display = 'none'
         document.getElementById('restart').style.display = 'flex'
     }, 3000)
+
 }
 
 // setInterval(function(){

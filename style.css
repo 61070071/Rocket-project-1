@@ -66,7 +66,7 @@ body {
     width: 100%;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 100%;
     transition: all 2s;
 }
 
@@ -91,6 +91,27 @@ div#text {
     margin: auto;
     margin-top: 10em;
     height: 40%;
+}
+
+div#intro {
+    z-index: 105;
+    margin: auto;
+    margin-top: 5em;
+    height: 40%;
+    opacity: 0;
+    transition: 2s;
+    color: #fff;
+}
+
+div#scroll {
+    z-index: 105;
+    margin: auto;
+    margin-top: 5.5em;
+    height: 40%;
+    opacity: 100;
+    transition: 2s;
+    color: #fff;
+    animation: fadeIn 1s infinite alternate;
 }
 
 div#text p {
@@ -216,30 +237,9 @@ div#contain {
     transform: scale(1);
 }
 
-#description {
-    width: 300px;
-    height: 150px;
-    margin-left: -150px;
-    z-index: 30;
-    -webkit-animation: fade-in-slogan 4s .2s ease-in forwards;
-    -moz-animation: fade-in-slogan 4s .2s ease-in forwards;
-    animation: fade-in-slogan 4s .2s ease-in forwards;
-}
-
-@-webkit-keyframes fade-in-slogan {
-    0% {
-        opacity: 0;
-    }
-    30% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-    }
-    70% {
-        opacity: 1;
-    }
-    100% {
+@import "compass/css3";
+@keyframes fadeIn {
+    from {
         opacity: 0;
     }
 }
