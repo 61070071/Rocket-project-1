@@ -21,24 +21,24 @@
             <div id="bg-sky"></div>
             <div id="bg-ground"></div>
         </div>
-        <div id="intro" class="h1" style="text-align: center;">
+        <div id="intro" class="h1" style="display: none;">
             <b>กว่าจะมาเป็นมาาานู๊ดดดด</b>
         </div>
-        <div id="scroll" class="h7" style="text-align: center;">
+        <div id="scroll" class="h7" style="display: none;">
             <b><b style="color: rgb(59, 87, 129);">เลื่อนเมาส์ลง</b>เพื่อเริ่มวิวัฒนาการของคุณ</b>
             <img src="image/Scroll.svg" style="width: 50px; margin-top: 20px;">
         </div>
-        <div id="text" style="display: none;">
+        <div id="text">
             <p class="h7" id="center_text">คุณจะวิวัฒนาการไปในทางใด</p>
             <!-- <div id="description" class="intro" style="position: absolute; color: aliceblue;">
                 <h1>เลี้ยงลูกด้วยนม</h1>
             </div> -->
         </div>
 
-        <div id="contain" style="display: none;">
-            <button class="btn_choice btn size-l shadow" onclick="changeImg()" id="routeA">หาอาหารบนบก</button>
+        <div id="contain">
+            <button class="btn_choice btn size-l shadow" onclick="changeImg(this)" id="routeA">หาอาหารบนบก</button>
             <img class="character" id="main_picture" src="image/Coelacanth.png" alt="">
-            <button class="btn_choice btn size-l shadow" onclick="ending()" id="routeB">หาอาหารในน้ำ</button>
+            <button class="btn_choice btn size-l shadow" onclick="changeImg(this)" id="routeB">หาอาหารในน้ำ</button>
 
             <div class="centered">
                 <button class="btn_choice btn size-l shadow" onclick="location.reload()" id="restart" style="display: none;">กลับไป ณ จุดเริ่มต้นของวิวัฒนาการ</button>
