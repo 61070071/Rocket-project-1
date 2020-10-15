@@ -137,7 +137,7 @@ function changeImg() {
             document.getElementById("main_picture").height = character.chr[num].s_ht
             image.classList.toggle("hid");
         }, 500)
-        document.querySelector("#bg-ground").style.backgroundPosition = road + "% 50%"
+        document.querySelector("#bg-ground").style.backgroundPosition = road + "% 100%"
 
         setTimeout(function() {
             center_text.style.opacity = 100
@@ -151,7 +151,7 @@ function ending() {
     center_text.innerHTML = '<b>วิวัฒนาการที่คุณเลือกนั้น ได้สูญพันธ์ในเวลาต่อมา</b><br><p>ผู้แข็งแกร่งย่อมอยู่รอด ผู้อ่อนแอจะถูกคัดออก นั่นคือความเป็นไปของโลกใบนี้<p>'
     document.getElementById('center_text').style.color = '#b54949'
     document.getElementById('center_text').style.fontSize = 'xx-large'
-    document.querySelector("#bg-ground").style.backgroundPosition = "300% 50%"
+    document.querySelector("#bg-ground").style.backgroundPosition = "300% 100%"
 
     setTimeout(function() {
         main_picture.style.opacity = 0
