@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    overflow-x: hidden;
+    min-height: 500vh;
 }
 
 :root {
@@ -31,7 +31,7 @@ body {
 #main_picture {
     padding: 0 5em;
     transform: scale(1);
-    transition: all 2s;
+    transition: all 1.5s;
 }
 
 .container {
@@ -39,12 +39,11 @@ body {
     flex-direction: column;
     /* flex: 1; */
     width: 100%;
-    height: 100%;
-    /* flex-direction: row; */
+    height: 100vh;
 }
 
 #bg-sky {
-    background-color: hsl(194, 79%, 77%);
+    background-color:#7AD8F6;
     background-repeat: no-repeat;
     display: block;
     background-size: cover;
@@ -55,8 +54,10 @@ body {
     left: 0;
     transition: 3s;
 }
-
-#bg-ground {
+.btn{
+    transition: .5s;
+}
+/* #bg-ground {
     background-image: url(image/Untitled_Artwork.png);
     background-repeat: no-repeat;
     display: block;
@@ -68,21 +69,53 @@ body {
     left: 0;
     bottom: 0;
     transition: all 2s;
+} */
+#groundWater{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: -100%;
+    transition: all 3s;
+    z-index: 160;
+}
+#ground{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 100%;
+    bottom: 0%;
+    transition: all 3s;
+    z-index: 161;
+}
+.mySlides {
+    width:100%;
 }
 
-.h7 {
-    transition: all 1s;
-}
-
-.hidden {
+.hidden{
     opacity: 0;
 }
 
-.bg {
-    display: block;
+.dialog {
+    z-index: 105;
+    color: #106A46;
+    transition: 1s;
+    margin: auto;
+    margin-top: 75em;
+    text-align: center;
+}
+
+#description{
     position: absolute;
-    width: 150%;
-    height: 100%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 163;
+    text-align: center;
+    opacity: 0;
+    transition: 2.5s;
 }
 
 div#text {
@@ -104,13 +137,19 @@ div#intro {
 }
 
 div#scroll {
-    z-index: 105;
-    margin: auto;
-    margin-top: 5.5em;
+    text-align: center;
+    z-index: 162;
     height: 40%;
     opacity: 100;
     transition: 2s;
     color: #fff;
+    
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#next_icon{
     animation: fadeIn 1s infinite alternate;
 }
 
@@ -119,17 +158,36 @@ div#text p {
 }
 
 div#contain {
+    opacity: 0;
     display: flex;
+    position: fixed;
+    top: 35%;
+    left: 25%;
     margin: auto;
-    margin-bottom: 14em;
-    z-index: 100;
+    margin-bottom: 10em;
+    z-index: 161;
     height: 60%;
-    width: 800px;
+    width: 1000px;
     justify-content: space-around;
     align-items: center;
+    transition: 2s;
 }
 
-
+#final{
+    text-align: center;
+    position: fixed;
+    top: 30%;
+    left: 25%;
+    opacity: 0;
+    transition: 2s;
+}
+#text_restart{
+    position: fixed;
+    top: -85%;
+    left: 40%;
+    opacity: 0;
+    transition: 2s;
+}
 /* ---------------------------CLOID------------------------------- */
 
 #sky_obj {
@@ -202,13 +260,36 @@ div#contain {
 
 #center_text {
     text-align: center;
+    margin-top: 10vh;
+    z-index: 162;
 }
 
 #restart {
     display: none;
     transition: 3s;
 }
+#LabelFinalSecond{
+    color: #444;
+}
+#all_page {
+    position: fixed;
+    width: 100%;
+}
 
+#water {
+    background-color: #6CBEE6;
+    background-repeat: no-repeat;
+    display: block;
+    background-size: 180%;
+    background-position: 0% 100%;
+    height: 40%;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    bottom: -100%;
+    transition: all 2s;
+    z-index: 110;
+}
 @-webkit-keyframes move {
     0% {
         -webkit-transform: translateX(1650px);
@@ -229,7 +310,7 @@ div#contain {
 
 /* ---------------------------CLOID------------------------------- */
 
-#main_picture.hid {
+#main_picture.hid, #routeA.hid,#routeB.hid,#description.hid,#final.hid,#text_restart.hid{
     transform: scale(0);
 }
 
@@ -243,3 +324,5 @@ div#contain {
         opacity: 0;
     }
 }
+
+ 

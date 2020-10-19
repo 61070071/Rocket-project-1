@@ -11,40 +11,117 @@
 </head>
 
 <body onload="sizeimg()">
-    <div id="sky_obj">
-        <div id="cloud1"></div>
-        <div id="cloud2"></div>
+    <div id="all_page">
+        <div id="sky_obj">
+            <div id="cloud1"></div>
+            <div id="cloud2"></div>
 
-    </div>
-    <div class="container">
-        <div class="bg">
+        </div>
+        <div class="container">
             <div id="bg-sky"></div>
-            <div id="bg-ground"></div>
-        </div>
-        <div id="intro" class="h1" style="display: none;">
-            <b>กว่าจะมาเป็นมาาานู๊ดดดด</b>
-        </div>
-        <div id="scroll" class="h7" style="display: none;">
-            <b><b style="color: rgb(59, 87, 129);">เลื่อนเมาส์ลง</b>เพื่อเริ่มวิวัฒนาการของคุณ</b>
-            <img src="image/Scroll.svg" style="width: 50px; margin-top: 20px;">
-        </div>
-        <div id="text">
-            <p class="h7" id="center_text">คุณจะวิวัฒนาการไปในทางใด</p>
-            <!-- <div id="description" class="intro" style="position: absolute; color: aliceblue;">
+            <!-- <div id="bg-ground"></div> -->
+            <div id="groundWater">
+                <img class="mySlides" id="img1" src="image/g1.png">
+            </div>
+            <div id="ground">
+                <img class="mySlides" id="img2" src="image/g2.png">
+                <img class="mySlides" id="img3" src="image/g3.png">
+                <img class="mySlides" id="img4" src="image/g4.png">
+                <img class="mySlides" id="img5" src="image/g5.png">
+                <img class="mySlides" id="img6" src="image/g6.png">
+                <img class="mySlides" id="img7" src="image/g7.png">
+                <img class="mySlides" id="img8" src="image/g8.png">
+                <img class="mySlides" id="img9" src="image/g9.png">
+                <img class="mySlides" id="img10" src="image/g10.png">
+                <img class="mySlides" id="img11" src="image/g11.png">
+                <img class="mySlides" id="img6" src="image/g6.png">
+                <img class="mySlides" id="img12" src="image/g12.png">
+                <img class="mySlides" id="img13" src="image/g13.png">
+                <img class="mySlides" id="img14" src="image/g14.png">
+                <img class="mySlides" id="img15" src="image/g15.png">
+                <img class="mySlides" id="img16" src="image/g16.png">
+                <img class="mySlides" id="img17" src="image/g17.png">
+            </div>
+            <div id="intro" class="h1">
+                <img src="image/LOGO.png">
+            </div>
+            <div id="scroll" class="h6">
+                <b id='scroll_dialog'><b
+                        style="color: rgb(59, 87, 129);">เลื่อนเมาส์ลง</b>เพื่อเริ่มวิวัฒนาการของคุณ</b>
+                <img onclick="start()" id="next_icon" src="image/Scroll.svg"
+                    style="width: 50px; margin-top: 20px; cursor: pointer;">
+            </div>
+            <div class="dialog">
+                <b class="h5">
+                    หลายๆคนคงสงสัยว่า เราคือใคร เรามาจากไหน
+                </b>
+            </div>
+            <div class="dialog page1">
+                <p class="h5">
+                    โลกได้กำเนิดขึ้นจากกลุ่มแก๊สและฝุ่นผงในอวกาศ<br> และเกิดการควบแน่นกลายเป็นโลกแห่งนี้ขึ้นมา
+                </p>
+                <img src="/image/earth.gif" style="width:250px; margin-top: 30px;">
+            </div>
+            <div class="dialog page2">
+                <p class="h5">
+                    ภายในโลกของเรามีสารประกอบทางเคมีหลายอย่าง ซึ่งในภาวะที่เหมาะสม<br>
+                    สิ่งเหล่านี้รวมกันเป็นสารประกอบอินทรีย์ และเกิดสิ่งที่มีชีวิตเซลล์เดียวขึ้นมา
+                </p>
+                <img src="/image/bacteria.gif" style="width:250px; margin-top: 30px;">
+            </div>
+            <div class="dialog page3">
+                <p class="h6">
+                    เมื่อเวลาผ่านไปสิ่งมีชีวิตเซลล์เดียวได้กลายพันธุ์ เป็นสิ่งมีชีวิตหลายๆอย่าง
+                    และผ่านการคัดเลือกโดยธรรมชาติ <br> ให้สายพันธุ์ที่เหมาะสมกับสภาพแวดล้อมสามารถดำรงเผ่าพันธุ์ต่อไปได้
+                    <br> <b>ส่วนสายพันธุ์ที่ไม่มีการปรับตัว หรือไม่เหมาะสมกับสภาพแวดล้อม
+                        จะสูญพันธุ์ไปในที่สุด</b>
+                </p>
+            </div>
+            <div class="dialog page4">
+                <p class="h6">
+                    จะเห็นได้ว่าในโลกเรามีสิ่งมีชีวิตหลากหลาย
+                    ซึ่งสิ่งมีชีวิตทุกชนิดล้วนมีบรรพบุรุษร่วมกันคือสัตว์เซลล์เดียว
+                    <br>แต่มีสิ่งที่ทำให้แต่ละชนิดแตกต่างกันคือ “สภาพแวดล้อม” และ “ความสามารถปรับตัว” ของสิ่งมีชีวิต
+                    <br>ให้สามารถอยู่รอดในสภาพที่แตกต่างกันได้
+                </p>
+            </div>
+            <div class="dialog page5">
+                <p class="h6">
+                    และมนุษย์ เป็นหนึ่งในสายพันธุ์ที่ผ่านการปรับตัวมาอย่างยาวนาน
+                </p>
+                <div id="water">
+                </div>
+            </div>
+            <div class="dialog page6">
+
+            </div>
+            <div id="text">
+                <p class="h6" id="center_text">คุณจะเลือกวิวัฒนาการไปทางใด</p>
+                <!-- <div id="description" class="intro" style="position: absolute; color: aliceblue;">
                 <h1>เลี้ยงลูกด้วยนม</h1>
             </div> -->
-        </div>
+            </div>
+            <b><label id="description" class="h6 cl-white">ณ ขณะนี้คุณกำลังถูกปลาที่ตัวใหญ่กว่าทำร้าย
+                    และคุณก็หาอาหารไม่ค่อยได้คุณจะทำยังไง</label></b>
+            <div id="contain">
+                <button class="btn_choice btn size-vl shadow" onclick="changeImg(this)" id="routeA">หนีขึ้นบก</button>
+                <img class="character" id="main_picture" src="image/Coelacanth.png" alt="">
+                <button class="btn_choice btn size-vl shadow" onclick="changeImg(this)"
+                    id="routeB">อยู่ในน้ำต่อ</button>
 
-        <div id="contain">
-            <button class="btn_choice btn size-l shadow" onclick="changeImg(this)" id="routeA">หาอาหารบนบก</button>
-            <img class="character" id="main_picture" src="image/Coelacanth.png" alt="">
-            <button class="btn_choice btn size-l shadow" onclick="changeImg(this)" id="routeB">หาอาหารในน้ำ</button>
-
-            <div class="centered">
-                <button class="btn_choice btn size-l shadow" onclick="location.reload()" id="restart" style="display: none;">กลับไป ณ จุดเริ่มต้นของวิวัฒนาการ</button>
+                <div class="centered">
+                    <button class="btn_choice btn size-l shadow" onclick="location.reload()" id="restart"
+                        style="display: none;">กลับไป ณ จุดเริ่มต้นของวิวัฒนาการ</button>
+                </div>
+                <div id="final">
+                    <b><label class="h5">finally, You become human !</label><br>
+                        <label id="LabelFinalSecond" class="h7">maybe you should play again in the wrong choice find out
+                            what you will be</label></b>
+                </div>
+                <button id="text_restart" class="btn_choice btn size-l shadow" onclick="location.reload()">กลับไป ณ
+                    จุดเริ่มต้นของวิวัฒนาการ</button>
             </div>
         </div>
-
     </div>
     <script src="script.js"></script>
 </body>
