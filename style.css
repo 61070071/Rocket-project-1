@@ -259,9 +259,13 @@ div#contain {
 }
 
 #center_text {
+    opacity: 0;
     text-align: center;
     margin-top: 10vh;
     z-index: 162;
+    position: absolute;
+    top: 20%;
+    left: 25%;
 }
 
 #restart {

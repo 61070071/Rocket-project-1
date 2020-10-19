@@ -166,7 +166,6 @@ function changeImg(textBtn) {
             }, 5500)
 
         }
-        center_text.style.opacity = 0
 
         image.classList.toggle("hid");
         btnA.classList.toggle("hid");
@@ -195,10 +194,6 @@ function changeImg(textBtn) {
         }, 6000)
         
         if (character.chr[num].id != 10) {
-            setTimeout(function () {
-                center_text.style.opacity = 100
-                
-            }, 6500)
         }
 
     }
@@ -212,10 +207,14 @@ function ending() {
     document.getElementById('center_text').style.color = '#b54949'
     document.getElementById('center_text').style.fontSize = 'xx-large'
     document.getElementById('ground').style.opacity = 0
+    document.querySelector("#groundWater").style.bottom = "-100%"
+    document.getElementById('water').style.height = '0%'
 
 
 
     setTimeout(function () {
+        center_text.style.opacity = 100
+        description.style.opacity = 0
         main_picture.style.opacity = 0
         document.getElementById('sky_obj').style.opacity = 0
         document.getElementById('bg-sky').style.backgroundColor = '#232323'
