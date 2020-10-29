@@ -163,6 +163,7 @@ function changeImg(textBtn) {
             setTimeout(function () {
                 document.getElementById('text_restart').style.opacity = 1
                 document.getElementById('final').style.opacity = 1
+                document.getElementById('description').style.opacity = 0
             }, 5500)
 
         }
@@ -171,12 +172,12 @@ function changeImg(textBtn) {
         btnA.classList.toggle("hid");
         btnB.classList.toggle("hid");
         
-        routeA.innerHTML = character.chr[num].text1 + ""
-        routeB.innerHTML = character.chr[num].text2 + ""
         document.getElementById('description').style.opacity = 0
         setTimeout(function () {
             description.innerHTML = character.chr[num].desc + ""
-        }, 1500)
+            routeA.innerHTML = character.chr[num].text1 + ""
+            routeB.innerHTML = character.chr[num].text2 + ""
+        }, 1800)
         setTimeout(function () {
             document.getElementById('description').style.opacity = 1
         }, 2500)
@@ -253,22 +254,27 @@ window.addEventListener(
         if (window.pageYOffset >= 300) {
             document.getElementById('intro').style.marginTop += -16 + 'em'
             document.getElementById('scroll_dialog').innerHTML = '<b>เลื่อนเมาส์ลงเพื่อไปหน้าต่อไป</b>'
-
+            console.log(document.getElementById('bg-sky').style.background)
         }
         if (window.pageYOffset >= 800) {
             document.getElementsByClassName('dialog')[0].style.marginTop += -14 + 'em'
+            document.getElementById('bg-sky').style.background = "hsl(195, 87%,24%)"
         }
         if (window.pageYOffset >= 1300) {
             document.getElementsByClassName('page1')[0].style.marginTop += -22 + 'em'
+            document.getElementById('bg-sky').style.background = "hsl(195, 87%,36%)"
         }
         if (window.pageYOffset >= 1800) {
             document.getElementsByClassName('page2')[0].style.marginTop += -17 + 'em'
+            document.getElementById('bg-sky').style.background = "hsl(195, 87%,48%)"
         }
         if (window.pageYOffset >= 2300) {
             document.getElementsByClassName('page3')[0].style.marginTop += -8 + 'em'
+            document.getElementById('bg-sky').style.background = "hsl(195, 87%,60%)"
         }
         if (window.pageYOffset >= 2800) {
             document.getElementsByClassName('page4')[0].style.marginTop += -8 + 'em'
+            document.getElementById('bg-sky').style.background = "hsl(195, 87%,72%)"
             document.getElementById('water').style.bottom = 0 + '%'
             document.getElementById('scroll_dialog').innerHTML = '<b>มาเริ่มวิวัฒนาการของคุณกัน</b>'
             image = document.querySelector('IMG#next_icon')
