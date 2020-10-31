@@ -243,6 +243,9 @@ function start() {
         document.querySelector("#groundWater").style.bottom = "0%"
         document.getElementById('scroll').style.top = '-10%'
         document.getElementById('contain').style.opacity = 100
+        setTimeout(function () {
+            document.getElementById('description').style.opacity = 1
+        }, 2500)
     }
 
 }
