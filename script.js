@@ -3,6 +3,7 @@ let count = 0
 let road = 100
 let vtc = 0
 let hrz = 0
+let switch_info = 0
 document.getElementById("main_picture").height = 200
 var character = {
     "chr": [{
@@ -51,7 +52,7 @@ var character = {
         s_wh: "400",
         s_ht: "150",
         answer: "ทางผิวหนัง",
-        wrong: "วิวัฒนาการขั้นต่อไปของคุณจะขึ้นไปอาศัยอยู่บนต้นไม้เป็นส่วนใหญ่ทำให้คุณเคลื่อนไหวร่างกายเยอะขึ้น จึงจำเป็นที่จะต้องมีระบบระบายความร้อนที่ดี และเนื่องจากการระบายความร้อนทางอุ้งเท้ามีประสิทธิภาพต่ำซึ่งเป็นไปได้ยากที่คุณจะขึ้นไปหาอาหารตามต้นไม้  คุณจึงจะมีวิวัฒนาการไปเป็นสัตว์เลี้ยงลูกด้วยนมที่อาศัยอยู่บนพื้นดินในปัจจุบัน เช่น จิงโจ้,ตุ่นปากเป็ด และช้าง
+        wrong: "วิวัฒนาการขั้นต่อไปของคุณจะขึ้นไปอาศัยอยู่บนต้นไม้เป็นส่วนใหญ่ทำให้คุณเคลื่อนไหวร่างกายเยอะขึ้น จึงจำเป็นที่จะต้องมีระบบระบายความร้อนที่ดี และเนื่องจากการระบายความร้อนทางอุ้งเท้ามีประสิทธิภาพต่ำซึ่งเป็นไปได้ยากที่คุณจะขึ้นไปหาอาหารตามต้นไม้  คุณจึงจะมีวิวัฒนาการไปเป็นสัตว์เลี้ยงลูกด้วยนมที่อาศัยอยู่บนพื้นดินในปัจจุบัน เช่น จิงโจ้,ตุ่นปากเป็ด และช้าง"
 
     },
 
@@ -148,7 +149,7 @@ function moveGround() {
         count++
     }
     else {
-        road -= 100
+        road -= 1800
         document.querySelector("#ground").style.left = road + "%"
     }
 
@@ -160,7 +161,7 @@ function changeImg(textBtn) {
             document.getElementById('water').style.height = '0%'
             count++
         }
-        num++
+        num+=9
         image = document.querySelector('IMG.character');
         btnA = document.querySelector('BUTTON#routeA');
         btnB = document.querySelector('BUTTON#routeB');
@@ -175,6 +176,7 @@ function changeImg(textBtn) {
                 document.getElementById('text_restart').style.opacity = 1
                 document.getElementById('final').style.opacity = 1
                 document.getElementById('description').style.opacity = 0
+                document.getElementById('more_info').style.opacity = 0
             }, 5500)
 
         }
@@ -184,6 +186,7 @@ function changeImg(textBtn) {
         btnB.classList.toggle("hid");
         
         document.getElementById('description').style.opacity = 0
+        document.getElementById('more_info').style.opacity = 0
         setTimeout(function () {
             description.innerHTML = character.chr[num].desc + ""
             routeA.innerHTML = character.chr[num].text1 + ""
@@ -191,6 +194,7 @@ function changeImg(textBtn) {
         }, 1800)
         setTimeout(function () {
             document.getElementById('description').style.opacity = 1
+            
         }, 2500)
         setTimeout(function () {
             moveGround()
@@ -202,6 +206,7 @@ function changeImg(textBtn) {
             image.classList.toggle("hid");
             btnA.classList.toggle("hid");
             btnB.classList.toggle("hid");
+            document.getElementById('more_info').style.opacity = 1
             
         }, 6000)
         
@@ -256,9 +261,20 @@ function start() {
         document.getElementById('contain').style.opacity = 100
         setTimeout(function () {
             document.getElementById('description').style.opacity = 1
+            document.getElementById('more_info').style.opacity = 1
         }, 2500)
     }
 
+}
+function close_info(){
+    if (switch_info == 0) {
+        info.style.display = "block"
+        switch_info++
+    }
+    else{
+        info.style.display = "none"
+        switch_info = 0
+    }
 }
 window.addEventListener(
 
