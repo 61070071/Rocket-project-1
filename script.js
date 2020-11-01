@@ -186,11 +186,9 @@ function changeImg(textBtn) {
         if (character.chr[num].id == 10) {
             document.getElementById('routeA').style.display = 'none'
             document.getElementById('routeB').style.display = 'none'
-            document.getElementById('text_restart').style.top = '85%'
             document.getElementById('final').style.display = 'block'
             setTimeout(function() {
                 document.getElementById('main_picture').style.display = 'none'
-                document.getElementById('text_restart').style.opacity = 1
                 document.getElementById('final').style.opacity = 1
                 document.getElementById('description').style.opacity = 0
                 document.getElementById('more_info').style.opacity = 0
