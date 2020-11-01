@@ -227,7 +227,7 @@ function changeImg(textBtn) {
 
         }, 6000)
 
-        if (character.chr[num].id != 10) {}
+        // if (character.chr[num].id != 10) {}
 
     } else {
         ending()
@@ -332,6 +332,7 @@ window.addEventListener(
 
 );
 
+// โค้ดหน้าสุดท้าย กดเลือกตัวละครแล้วกลับมาหน้าเดิม
 function select(a) {
     console.log(a.id.split("_")[1])
     num = (a.id.split("_")[1]) - 1
@@ -371,10 +372,9 @@ function move_to(num) {
 }
 
 // โค้ดกดเริ่มใหม่
-
 function restart() {
-    if (num == 1) {
-
+    if (num == 0) {
+        //ใส่โค้ดน้ำตรงนี้
     } else {
         move_to(num)
         document.getElementById('restart').style.display = 'none'
