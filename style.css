@@ -26,6 +26,10 @@ body {
 .centered {
     justify-content: center;
     align-items: center;
+    display: flex;
+    text-align: center;
+    z-index: 10;
+    margin-bottom: 8vh;
 }
 
 #main_picture {
@@ -43,7 +47,8 @@ body {
 }
 
 #bg-sky {
-     background-color:hsl(195, 87%, 12%); /*hsl(195, 87%, 72%) */
+    background-color: hsl(195, 87%, 12%);
+    /*hsl(195, 87%, 72%) */
     background-repeat: no-repeat;
     display: block;
     background-size: cover;
@@ -54,9 +59,12 @@ body {
     left: 0;
     transition: 3s;
 }
-.btn{
+
+.btn {
     transition: .5s;
 }
+
+
 /* #bg-ground {
     background-image: url(image/Untitled_Artwork.png);
     background-repeat: no-repeat;
@@ -70,7 +78,8 @@ body {
     bottom: 0;
     transition: all 2s;
 } */
-#groundWater{
+
+#groundWater {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -79,7 +88,8 @@ body {
     transition: all 3s;
     z-index: 5;
 }
-#ground{
+
+#ground {
     display: flex;
     flex-direction: row;
     position: absolute;
@@ -88,13 +98,14 @@ body {
     left: 100%;
     bottom: 0%;
     transition: all 3s;
-    z-index: 6;
-}
-.mySlides {
-    width:100%;
+    z-index: 0;
 }
 
-.hidden{
+.mySlides {
+    width: 100%;
+}
+
+.hidden {
     opacity: 0;
 }
 
@@ -107,7 +118,7 @@ body {
     text-align: center;
 }
 
-#description{
+#description {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -143,13 +154,13 @@ div#scroll {
     opacity: 100;
     transition: 2s;
     color: #fff;
-    
     position: absolute;
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-#next_icon{
+
+#next_icon {
     animation: fadeIn 1s infinite alternate;
 }
 
@@ -173,21 +184,23 @@ div#contain {
     transition: 2s;
 }
 
-#final{
-    text-align: center;
+#final {
     position: fixed;
-    top: 30%;
-    left: 25%;
     opacity: 0;
     transition: 2s;
+    z-index: -5;
+    display: none;
 }
-#text_restart{
+
+#text_restart {
     position: fixed;
     top: -85%;
-    left: 40%;
+    left: 80%;
     opacity: 0;
     transition: 2s;
 }
+
+
 /* ---------------------------CLOID------------------------------- */
 
 #sky_obj {
@@ -264,24 +277,31 @@ div#contain {
     margin-top: 10vh;
     z-index: 7;
     position: absolute;
-    top: 20%;
-    left: 25%;
+    top: 15%;
+    left: 14%;
 }
 
 #restart {
     display: none;
     transition: 3s;
+    top: 50%;
+    margin: 50px;
 }
-#LabelFinalSecond{
+
+#LabelFinalSecond {
     color: #444;
 }
+
 #all_page {
     position: fixed;
     width: 100%;
 }
+
+
 /* hsl(200, 71%, 66%); */
+
 #water {
-    background-color:hsl(200, 71%, 66%);
+    background-color: hsl(200, 71%, 66%);
     background-repeat: no-repeat;
     display: block;
     background-size: 180%;
@@ -292,8 +312,9 @@ div#contain {
     left: 0%;
     bottom: -100%;
     transition: all 2s;
-    z-index: 4;
+    z-index: -1;
 }
+
 @-webkit-keyframes move {
     0% {
         -webkit-transform: translateX(1650px);
@@ -311,7 +332,7 @@ div#contain {
     }
 }
 
-#c1 {
+#c_1 {
     width: 200px;
     left: 38%;
     top: 80%;
@@ -319,7 +340,7 @@ div#contain {
     transition: 0.5s;
 }
 
-#c2 {
+#c_2 {
     width: 300px;
     left: 50%;
     top: 80%;
@@ -328,7 +349,7 @@ div#contain {
     transition: 0.5s;
 }
 
-#c3 {
+#c_3 {
     width: 400px;
     position: fixed;
     left: 5%;
@@ -337,7 +358,7 @@ div#contain {
     transition: 0.5s;
 }
 
-#c4 {
+#c_4 {
     width: 200px;
     position: fixed;
     left: 27%;
@@ -345,7 +366,7 @@ div#contain {
     transition: 0.5s;
 }
 
-#c5 {
+#c_5 {
     width: 200px;
     position: fixed;
     top: 60%;
@@ -353,7 +374,7 @@ div#contain {
     transition: 0.5s;
 }
 
-#c6 {
+#c_6 {
     width: 100px;
     position: fixed;
     top: 50%;
@@ -361,7 +382,7 @@ div#contain {
     transition: 0.5s;
 }
 
-#c7 {
+#c_7 {
     width: 100px;
     position: fixed;
     top: 45%;
@@ -369,7 +390,7 @@ div#contain {
     transition: 0.5s;
 }
 
-#c8 {
+#c_8 {
     width: 130px;
     position: fixed;
     top: 50%;
@@ -377,7 +398,7 @@ div#contain {
     transition: 0.5s;
 }
 
-#c9 {
+#c_9 {
     width: 150px;
     position: fixed;
     top: 50%;
@@ -385,7 +406,7 @@ div#contain {
     transition: 0.5s;
 }
 
-#c10 {
+#c_10 {
     width: 140px;
     position: fixed;
     top: 50%;
@@ -393,47 +414,48 @@ div#contain {
     transition: 0.5s;
 }
 
-#c4:hover,
-#c1:hover,
-#c5:hover {
+#c_4:hover,
+#c_1:hover,
+#c_5:hover {
     width: 250px;
     transition: 0.5s;
 }
 
-#c2:hover {
+#c_2:hover {
     width: 400px;
     transition: 0.5s;
 }
 
-#c3:hover {
+#c_3:hover {
     width: 450px;
     transition: 0.5s;
 }
 
-#c6:hover,
-#c7:hover {
+#c_6:hover,
+#c_7:hover {
     width: 120px;
     transition: 0.5s;
 }
 
-#c8:hover,
-#c9:hover,
-#c10:hover {
+#c_8:hover,
+#c_9:hover,
+#c_10:hover {
     width: 160px;
     transition: 0.5s;
 }
 
-#sence_final{
+#scene_final {
     opacity: 0;
     width: 100%;
     height: 100vh;
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 5;
+    z-index: -5;
     transition: all 2s;
-    }
-#info{
+}
+
+#info {
     display: none;
     position: fixed;
     left: 15%;
@@ -444,13 +466,15 @@ div#contain {
     background-color: #F7FBFE;
     border-radius: 50px;
 }
-#img_info{
+
+#img_info {
     position: absolute;
     left: 5%;
     top: 30%;
     width: 500px;
 }
-#desc_info{
+
+#desc_info {
     position: absolute;
     left: 40%;
     top: 20%;
@@ -459,12 +483,14 @@ div#contain {
     background-color: #fff;
     border: 0.5px solid #707070;
 }
-#close_btn{
+
+#close_btn {
     position: absolute;
     left: 95%;
     top: 5%;
 }
-#more_info{
+
+#more_info {
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -474,16 +500,23 @@ div#contain {
     opacity: 0;
     transition: 2.5s;
 }
-#more_info label{
+
+#more_info label {
     margin-right: 5px;
 }
+
+
 /* ---------------------------CLOID------------------------------- */
 
-#main_picture.hid, #routeA.hid,#routeB.hid,#description.hid,#final.hid,#text_restart.hid{
+#main_picture.hid,
+#routeA.hid,
+#routeB.hid,
+#description.hid,
+#final.hid,
+#text_restart.hid {
     transform: scale(0);
 }
 
 .show {
     transform: scale(1);
 }
-
