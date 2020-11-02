@@ -140,7 +140,7 @@ div#text {
 div#intro {
     z-index: 3;
     margin: auto;
-    margin-top: 5em;
+    margin-top: 4em;
     height: 40%;
     opacity: 0;
     transition: 2s;
@@ -332,6 +332,12 @@ div#contain {
     }
 }
 
+#skip {
+    position: fixed;
+    top: 1%;
+    left: 94%;
+}
+
 #c_1 {
     width: 200px;
     left: 38%;
@@ -474,7 +480,8 @@ div#contain {
     width: 400px;
     text-align: center;
 }
-#div_img_info img{
+
+#div_img_info img {
     width: 100%;
     margin-bottom: 15px;
 }
@@ -509,6 +516,10 @@ div#contain {
 
 #more_info label {
     margin-right: 5px;
+}
+
+#summary {
+    display: none;
 }
 
 

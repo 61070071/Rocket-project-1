@@ -40,10 +40,13 @@
                 <img class="mySlides" id="img14" src="image/g14.png">
                 <img class="mySlides" id="img15" src="image/g15.png">
                 <img class="mySlides" id="img16" src="image/g16.png">
-                <img class="mySlides" id="img17" src="image/g11.png">
+                <img class="mySlides" id="img17" src="image/end.png">
+                <img class="mySlides" id="img18" src="image/end.png">
+                <img class="mySlides" id="img19" src="image/end.png">
             </div>
             <div id="intro" class="h1">
-                <img src="image/LOGO.png">
+                <button class="btn_choice btn size-l bg-orange shadow" id="skip" onclick="skip()">ข้าม!</button>
+                <img src="image/LOGO.png" id="logo">
             </div>
             <div id="scroll" class="h6">
                 <b id='scroll_dialog'><b
@@ -97,23 +100,21 @@
                 <img class="character" id="main_picture" src="image/Coelacanth.png" alt="">
                 <button class="btn_choice btn size-vl shadow" onclick="changeImg(this)" id="routeB">อยู่ในน้ำต่อ</button>
 
-
-                <!-- <div id="final">
-                    <b><label class="h5">finally, You become human !</label><br>
-                        <label id="LabelFinalSecond" class="h7">maybe you should play again in the wrong choice find out
-                            what you will be</label></b>
-                </div> -->
                 <div id="final">
-                    <img id="c_1" src="image/Coelacanth.png" onclick="select(this)">
-                    <img id="c_2" src="image/Ichthyostegaa.png" onclick="select(this)">
-                    <img id="c_3" src="image/Synapsids.png" onclick="select(this)">
-                    <img id="c_4" src="image/eutherain.png" onclick="select(this)">
-                    <img id="c_5" src="image/Primates.png " onclick="select(this)">
-                    <img id="c_6" src="image/australopithecus.png " onclick="select(this)">
-                    <img id="c_7" src="image/homo_habillis.png " onclick="select(this)">
-                    <img id="c_8" src="image/homo_erectus.png " onclick="select(this)">
-                    <img id="c_9" src="image/homo_neanderthalensis.png " onclick="select(this)">
-                    <img id="c_10" src="image/homo_sapiens.png " onclick="select(this)">
+                    <img id="c_1" src="image/Coelacanth.png" onclick="select(this)" style="cursor: pointer;">
+                    <img id="c_2" src="image/Ichthyostegaa.png" onclick="select(this)" style="cursor: pointer;">
+                    <img id="c_3" src="image/Synapsids.png" onclick="select(this)" style="cursor: pointer;">
+                    <img id="c_4" src="image/eutherain.png" onclick="select(this)" style="cursor: pointer;">
+                    <img id="c_5" src="image/Primates.png " onclick="select(this)" style="cursor: pointer;">
+                    <img id="c_6" src="image/australopithecus.png " onclick="select(this)" style="cursor: pointer;">
+                    <img id="c_7" src="image/homo_habillis.png " onclick="select(this)" style="cursor: pointer;">
+                    <img id="c_8" src="image/homo_erectus.png " onclick="select(this)" style="cursor: pointer;">
+                    <img id="c_9" src="image/homo_neanderthalensis.png " onclick="select(this)" style="cursor: pointer;">
+                    <img id="c_10" src="image/homo_sapiens.png " onclick="select(this)" style="cursor: pointer;">
+                </div>
+                <div id="summary">
+                    <b><label id="summary_text" class="h6 cl-white">เอ้ยๆๆๆๆๆๆๆๆๆๆๆ</label></b>
+                    <button class="btn_choice btn size-vl shadow" onclick="select_all()" id="all_char">เลือกยุคสมัยที่คุณต้องการกลับไป!</button>
                 </div>
 
             </div>
@@ -123,8 +124,8 @@
             </div>
 
             <div id="more_info">
-                    <label id="type_info" class="cl-white size-vl">Coelacanth</label>
-                   <img onclick="close_info()" src="image/information.png">
+                <label id="type_info" class="cl-white size-vl">Coelacanth</label>
+                <img onclick="close_info()" src="image/information.png">
             </div>
             <div id="info">
                 <div id="div_img_info"><img id="img_info" src="image/Coelacanth.png"><label id="type_this_info" class="h8">Coelacanth</label></div>
