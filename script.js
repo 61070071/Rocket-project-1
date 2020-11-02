@@ -323,7 +323,7 @@ function ending() {
         document.getElementById('routeB').style.display = 'none'
     }, 600)
     setTimeout(function() {
-        document.getElementById("description").className = "h7 cl-white";
+        document.getElementById("description").className = "h8 cl-white";
         description.innerHTML = character.chr[num].wrong
     }, 2500)
     setTimeout(function() {
@@ -475,7 +475,7 @@ function marginPage(p) {
         image = document.querySelector('IMG#next_icon')
         image.style.cursor = 'pointer';
         image.getAttribute('src')
-        image.setAttribute('src', 'image/down_btn.svg')
+        image.setAttribute('src', 'image/scroll-wh.png')
         image.getAttribute('onclick')
         image.setAttribute('onclick', 'start()')
     }
