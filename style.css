@@ -449,7 +449,9 @@ div#contain {
     width: 160px;
     transition: 0.5s;
 }
-
+#C_1,#C_2,#C_3,#C_4,#C_5,#C_6,#C_7,#C_8,#C_9,#C_10{
+    cursor: pointer;
+}
 #scene_final {
     opacity: 0;
     width: 100%;

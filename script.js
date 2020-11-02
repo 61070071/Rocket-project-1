@@ -17,9 +17,9 @@ var character = {
                 s_ht: "150",
                 answer: "หนีขึ้นบก",
                 info: "Coelacanth เป็นสิ่งมีชีวิตยุคก่อนไดโนเสาร์และสัตว์เลื้อยคลาน ปลาซีลาแคนท์คือบรรพบุรุษของสัตว์โลกที่มีกระดูกสันหลังทุกชนิด ถือกำเนิดครั้งแรกบนโลกในยุคซูลลิเรียนเมื่อ 443 ล้านปีก่อนและได้ขยายเผ่าพันธุ์ไปจนถึงยุคดีโวเนียนซึ่งเป็นยุคที่มีปลาชุกชุมจนได้ชื่อว่าเป็นยุคแห่งปลา (Age of Fish) พวกมันมีครีบเป็นพลูอยู่ที่ทรวงอก ครีบหางแตกออกแยกเป็น 3 พลู มีเกล็ดที่บางกว่าเกล็ดปลาพวกคอสมอยด์ มีอวัยวะพิเศษสำหรับตอบรับทางไฟฟ้าอยู่ทางด้านหน้าของกะโหลกที่อาจจะใช้ช่วยในการตรวจจับเหยื่อ",
-                where: 0,
+                where: 100,
                 wrong: "เนื่องจากในยุคดีโวเนียนมีประชากรสัตว์มีกระดูกสันหลังในน้ำจำนวนมากทำให้ขาดแคลนอาหาร <br> ปลาซีลาแคนท์จึงมีวิวัฒนาการมาจากการเริ่มหนีขึ้นไปหาอาหารบนบก ถ้าคุณเลือกที่จะอาศัยอยู่ในน้ำต่อคุณจะต้องพยายามเอาตัวรอดโดยการแย่งชิงอาหารจากปลาตัวอื่นๆ <br> คุณจึงมีวิวัฒนาการไปเป็นปลาขนาดใหญ่ในปัจจุบัน",
-                alt_pic: "image/frogs.png"
+                alt_pic: "image/Coelacanth_.png"
             },
             {
                 id: 2,
@@ -262,7 +262,7 @@ function ending() {
         document.getElementById('bg-sky').style.backgroundColor = '#232323'
     }, 500)
     setTimeout(function() {
-        image.setAttribute('src', character.chr[num].alt_pic);
+        document.getElementById("main_picture").src = character.chr[num].alt_pic + ""
         document.getElementById('routeA').style.display = 'none'
         document.getElementById('routeB').style.display = 'none'
     }, 600)
@@ -345,7 +345,7 @@ window.addEventListener(
             document.getElementById('scroll_dialog').innerHTML = '<b>มาเริ่มวิวัฒนาการของคุณกัน</b>'
             image = document.querySelector('IMG#next_icon')
             image.getAttribute('src')
-            image.setAttribute('src', 'image/down_btn.svg')
+            image.setAttribute('src', 'image/scroll-wh.png')
         }
     },
 
@@ -394,13 +394,38 @@ function move_to(num) {
 function restart() {
     if (num == 0) {
         //ใส่โค้ดน้ำตรงนี้
+        document.getElementById('restart').style.display = 'none'
+        document.getElementById('retry').style.display = 'none'
+        description.innerHTML = character.chr[num].desc
+        document.getElementById('ground').style.opacity = 1
+        document.getElementById('bg-sky').style.backgroundColor = 'rgb(121, 215, 246)'
+        document.getElementById('description').style.opacity = 0
+        document.querySelector("#groundWater").style.bottom = "0%"
+        document.getElementById('main_picture').style.opacity = 0
+        document.getElementById('water').style.height = "100%"
+        setTimeout(function () {
+            document.getElementById("description").className = "h6 cl-white";
+            document.getElementById("main_picture").src = character.chr[num].name_img + ""
+        }, 1500)
+        setTimeout(function () {
+            document.getElementById('sky_obj').style.opacity = 1
+        }, 2100)
+        setTimeout(function () {
+            document.getElementById('routeA').style.display = 'block'
+            document.getElementById('routeB').style.display = 'block'
+            document.getElementById('main_picture').style.opacity = 1
+            document.getElementById('more_info').style.opacity = 1
+            document.getElementById('description').style.opacity = 1
+        }, 3700)
+        road = character.chr[num].where
+        document.querySelector("#ground").style.left = road + "%"
     } else {
         move_to(num)
         document.getElementById('restart').style.display = 'none'
         document.getElementById('retry').style.display = 'none'
         document.getElementById('ground').style.opacity = 1
         document.getElementById('water').style.height = 0 + "%"
-        document.getElementById('bg-sky').style.backgroundColor = '#86BBD8'
+        document.getElementById('bg-sky').style.backgroundColor = 'rgb(121, 215, 246)'
         document.getElementById('main_picture').style.opacity = 0
         document.getElementById('description').style.opacity = 0
         description.innerHTML = character.chr[num].wrong
