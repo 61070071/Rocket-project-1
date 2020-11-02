@@ -178,7 +178,7 @@ div#contain {
     margin-bottom: 10em;
     z-index: 6;
     height: 60%;
-    width: 1000px;
+    width: 950px;
     justify-content: space-around;
     align-items: center;
     transition: 2s;
@@ -467,11 +467,16 @@ div#contain {
     border-radius: 50px;
 }
 
-#img_info {
+#div_img_info {
     position: absolute;
     left: 5%;
-    top: 30%;
-    width: 500px;
+    top: 40%;
+    width: 400px;
+    text-align: center;
+}
+#div_img_info img{
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 #desc_info {
@@ -482,6 +487,7 @@ div#contain {
     height: 500px;
     background-color: #fff;
     border: 0.5px solid #707070;
+    padding: 15px;
 }
 
 #close_btn {
