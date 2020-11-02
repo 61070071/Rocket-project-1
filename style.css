@@ -477,10 +477,10 @@ div#contain {
 #info {
     display: none;
     position: fixed;
-    left: 15%;
+    left: 20%;
     top: 10%;
-    width: 1400px;
-    height: 800px;
+    width: 1200px;
+    height: 600px;
     z-index: 7;
     background-color: #F7FBFE;
     border-radius: 50px;
@@ -488,23 +488,22 @@ div#contain {
 
 #div_img_info {
     position: absolute;
-    left: 5%;
-    top: 40%;
+    left: 0%;
+    top: 25%;
     width: 400px;
     text-align: center;
 }
 
 #div_img_info img {
-    width: 100%;
     margin-bottom: 15px;
 }
 
 #desc_info {
     position: absolute;
-    left: 40%;
-    top: 20%;
+    left: 28%;
+    top: 13%;
     width: 750px;
-    height: 500px;
+    height: 430px;
     background-color: #fff;
     border: 0.5px solid #707070;
     padding: 15px;
@@ -519,12 +518,15 @@ div#contain {
 #more_info {
     position: fixed;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     top: 75%;
     left: 45%;
     z-index: 6;
     opacity: 0;
     transition: 2.5s;
+    text-shadow: 0px 2px 6px #0005;
 }
 
 #more_info label {
