@@ -1,4 +1,4 @@
-let num = 0
+let num = 8
 let count = 0
 let road = 100
 let vtc = 0
@@ -197,13 +197,16 @@ function changeImg(textBtn) {
             document.getElementById('more_info').style.display = 'none'
             document.getElementById('routeA').style.display = 'none'
             document.getElementById('routeB').style.display = 'none'
-            document.getElementById('summary').style.display = 'block'
+
+
             setTimeout(function() {
-                document.getElementById('main_picture').style.display = 'none'
+                document.getElementById('summary').style.display = 'block'
                 document.getElementById('summary').style.opacity = 1
+                document.getElementById('main_picture').style.display = 'none'
                 document.getElementById('description').style.opacity = 0
 
-            }, 5500)
+            }, 5700)
+
 
         }
 
@@ -279,7 +282,9 @@ function ending() {
 }
 
 function start() {
+    document.getElementById('contain').style.display = 'flex';
     document.getElementById('skip').style.display = 'none';
+
     if (count == 0) {
         count++
         document.getElementsByClassName('page5')[0].style.marginTop += -20 + 'em'
@@ -308,48 +313,120 @@ function close_info() {
         switch_info = 0
     }
 }
+let stack = 1;
 window.addEventListener(
-
     "scroll",
     () => {
-        console.log(window.pageYOffset)
+        if (window.pageYOffset < 300 && stack > 1) {
+            stack = 1;
+            showPage('intro');
+        }
+
+        if (window.pageYOffset < 800 && stack > 2) {
+            stack = 2;
+            showPage('dialog');
+        }
+
+        if (window.pageYOffset < 1300 && stack > 3) {
+            stack = 3;
+            showPage('page1');
+        }
+
+        if (window.pageYOffset < 1800 && stack > 4) {
+            stack = 4;
+            showPage('page2');
+        }
+
+        if (window.pageYOffset < 2300 && stack > 5) {
+            stack = 5;
+            showPage('page3');
+        }
+
+        if (window.pageYOffset < 2800 && stack > 6) {
+            stack = 6;
+            showPage('page4');
+            setTimeout(function() {
+                document.getElementById('skip').style.opacity = 1
+            }, 300)
+            setTimeout(function() {
+                document.getElementById('skip').style.display = 'block'
+            }, 500)
+        }
+
         if (window.pageYOffset >= 300) {
-            document.getElementById('intro').style.marginTop += -16 + 'em'
-            document.getElementById('scroll_dialog').innerHTML = '<b>เลื่อนเมาส์ลงเพื่อไปหน้าต่อไป</b>'
-            console.log(document.getElementById('bg-sky').style.background)
-
+            stack = 2;
+            marginPage('intro');
         }
-
         if (window.pageYOffset >= 800) {
-            document.getElementsByClassName('dialog')[0].style.marginTop += -14 + 'em'
-            document.getElementById('bg-sky').style.background = "hsl(195, 87%,24%)"
+            stack = 3;
+            marginPage('dialog');
         }
-
         if (window.pageYOffset >= 1300) {
-            document.getElementsByClassName('page1')[0].style.marginTop += -22 + 'em'
-            document.getElementById('bg-sky').style.background = "hsl(195, 87%,36%)"
+            stack = 4;
+            marginPage('page1');
         }
         if (window.pageYOffset >= 1800) {
-            document.getElementsByClassName('page2')[0].style.marginTop += -17 + 'em'
-            document.getElementById('bg-sky').style.background = "hsl(195, 87%,48%)"
+            stack = 5;
+            marginPage('page2');
         }
         if (window.pageYOffset >= 2300) {
-            document.getElementsByClassName('page3')[0].style.marginTop += -22 + 'em'
-            document.getElementById('bg-sky').style.background = "hsl(195, 87%,60%)"
+            stack = 6;
+            marginPage('page3');
         }
         if (window.pageYOffset >= 2800) {
-            document.getElementById('skip').style.opacity = 0;
-            document.getElementsByClassName('page4')[0].style.marginTop += -17 + 'em'
-            document.getElementById('bg-sky').style.background = "hsl(195, 87%,72%)"
-            document.getElementById('water').style.bottom = 0 + '%'
-            document.getElementById('scroll_dialog').innerHTML = '<b>มาเริ่มวิวัฒนาการของคุณกัน</b>'
-            image = document.querySelector('IMG#next_icon')
-            image.getAttribute('src')
-            image.setAttribute('src', 'image/scroll-wh.png')
+            stack = 7;
+            marginPage('page4');
+            setTimeout(function() {
+                document.getElementById('skip').style.opacity = 0
+            }, 300)
+            setTimeout(function() {
+                document.getElementById('skip').style.display = 'none'
+            }, 500)
+
         }
     },
-
 );
+
+function marginPage(p) {
+
+    if (p == 'intro') {
+        document.getElementById('intro').style.marginTop = -16 + 'em';
+        document.getElementById('scroll_dialog').innerHTML = '<b>เลื่อนเมาส์ลงเพื่อไปหน้าต่อไป</b>';
+    }
+
+    if (p == 'dialog') {
+        document.getElementsByClassName('dialog')[0].style.marginTop = -14 + 'em'
+        document.getElementById('bg-sky').style.background = "hsl(195, 87%,24%)"
+    }
+
+    if (p == 'page1') {
+        document.getElementsByClassName('page1')[0].style.marginTop = -22 + 'em'
+        document.getElementById('bg-sky').style.background = "hsl(195, 87%,36%)"
+    }
+
+    if (p == 'page2') {
+        document.getElementsByClassName('page2')[0].style.marginTop = -17 + 'em'
+        document.getElementById('bg-sky').style.background = "hsl(195, 87%,48%)"
+    }
+
+    if (p == 'page3') {
+        document.getElementsByClassName('page3')[0].style.marginTop = -22 + 'em'
+        document.getElementById('bg-sky').style.background = "hsl(195, 87%,60%)"
+    }
+
+    if (p == 'page4') {
+        document.getElementsByClassName('page4')[0].style.marginTop = -17 + 'em'
+        document.getElementById('bg-sky').style.background = "hsl(195, 87%,72%)"
+        document.getElementById('water').style.bottom = 0 + '%'
+        document.getElementById('scroll_dialog').innerHTML = '<b>มาเริ่มวิวัฒนาการของคุณกัน</b>'
+        image = document.querySelector('IMG#next_icon')
+        image.style.cursor = 'pointer';
+        image.getAttribute('src')
+        image.setAttribute('src', 'image/down_btn.svg')
+        image.getAttribute('onclick')
+        image.setAttribute('onclick', 'start()')
+    }
+}
 
 // โค้ดหน้าสุดท้าย กดเลือกตัวละครแล้วกลับมาหน้าเดิม
 function select(a) {
@@ -403,14 +480,14 @@ function restart() {
         document.querySelector("#groundWater").style.bottom = "0%"
         document.getElementById('main_picture').style.opacity = 0
         document.getElementById('water').style.height = "100%"
-        setTimeout(function () {
+        setTimeout(function() {
             document.getElementById("description").className = "h6 cl-white";
             document.getElementById("main_picture").src = character.chr[num].name_img + ""
         }, 1500)
-        setTimeout(function () {
+        setTimeout(function() {
             document.getElementById('sky_obj').style.opacity = 1
         }, 2100)
-        setTimeout(function () {
+        setTimeout(function() {
             document.getElementById('routeA').style.display = 'block'
             document.getElementById('routeB').style.display = 'block'
             document.getElementById('main_picture').style.opacity = 1
@@ -445,6 +522,46 @@ function restart() {
     }
 }
 
+function showPage(p) {
+    if (p == 'intro') {
+        document.getElementById('intro').style.marginTop = 5 + 'em';
+        document.getElementById('scroll_dialog').innerHTML = '<b style="color: rgb(59, 87, 129);">เลื่อนเมาส์ลง</b>เพื่อเริ่มวิวัฒนาการของคุณ</b>';
+    }
+
+    if (p == 'dialog') {
+        document.getElementsByClassName('dialog')[0].style.marginTop = 75 + 'em';
+        document.getElementById('bg-sky').style.background = "hsl(195, 87%, 12%)";
+    }
+
+    if (p == 'page1') {
+        document.getElementsByClassName('page1')[0].style.marginTop = 75 + 'em';
+        document.getElementById('bg-sky').style.background = "hsl(195, 87%,24%)";
+    }
+
+    if (p == 'page2') {
+        document.getElementsByClassName('page2')[0].style.marginTop = 75 + 'em';
+        document.getElementById('bg-sky').style.background = "hsl(195, 87%,36%)"
+    }
+
+    if (p == 'page3') {
+        document.getElementsByClassName('page3')[0].style.marginTop = 75 + 'em';
+        document.getElementById('bg-sky').style.background = "hsl(195, 87%,48%)";
+    }
+
+    if (p == 'page4') {
+        document.getElementsByClassName('page4')[0].style.marginTop = 75 + 'em';
+        document.getElementById('water').style.bottom = -100 + '%';
+        document.getElementById('scroll_dialog').innerHTML = '<b>เลื่อนเมาส์ลงเพื่อไปหน้าต่อไป</b>';
+        document.getElementById('bg-sky').style.background = "hsl(195, 87%,60%)";
+        image = document.querySelector('IMG#next_icon');
+        image.style.cursor = 'default';
+        image.getAttribute('src');
+        image.setAttribute('src', 'image/Scroll.svg');
+        image.getAttribute('onclick');
+        image.setAttribute('onclick', '');
+    }
+}
+
 function skip() {
     window.scrollBy(0, 3000);
 }
@@ -457,6 +574,6 @@ function select_all() {
     }, 300)
     setTimeout(function() {
         document.getElementById('final').style.opacity = 1
-        document.getElementById('summary').style.opacity = 0
+        document.getElementById('summary').style.display = 'none'
     }, 500)
 }
