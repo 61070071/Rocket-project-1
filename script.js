@@ -237,7 +237,7 @@ function changeImg(textBtn) {
                 document.querySelector("#groundWater").style.bottom = "-100%"
                 document.getElementById('water').style.height = '0%'
                 count++
-            }, 7000)
+            }, 9000)
 
         }
         num += 1
@@ -281,10 +281,10 @@ function changeImg(textBtn) {
         }, 2800)
         setTimeout(function () {
             document.getElementById('description').style.opacity = 0
-        }, 6300)
+        }, 8300)
         setTimeout(function () {
             moveGround()
-        }, 7500)
+        }, 9500)
         setTimeout(function () {
             description.innerHTML = character.chr[num].desc + ""
             routeA.innerHTML = character.chr[num].text1 + ""
@@ -296,13 +296,13 @@ function changeImg(textBtn) {
             document.getElementById("img_info").src = character.chr[num].name_img + "";
             document.getElementById('more_info').style.top = character.chr[num].pos_info[0] + "%"
             document.getElementById('more_info').style.left = character.chr[num].pos_info[1] + "%"
-        }, 8200)
+        }, 10200)
         setTimeout(function () {
             document.getElementById('description').style.opacity = 1
-        }, 9500)
+        }, 11500)
         setTimeout(function () {
             moveGround()
-        }, 12500)
+        }, 14500)
         setTimeout(function () {
             image.getAttribute('src');
             image.setAttribute('src', character.chr[num].name_img);
@@ -312,7 +312,7 @@ function changeImg(textBtn) {
             btnB.classList.toggle("hid");
             document.getElementById('more_info').style.opacity = 1
 
-        }, 13500)
+        }, 15500)
 
         // if (character.chr[num].id != 10) {}
 
