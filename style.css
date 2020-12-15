@@ -545,7 +545,6 @@ div#contain {
     opacity: 1;
     width: 100%;
     position: fixed;
-    transition: 0.2s;
 }
 
 .sum_text {

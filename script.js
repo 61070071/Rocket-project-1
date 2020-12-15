@@ -186,7 +186,7 @@ var character = {
         desc: "เย้! คุณได้เป็นมนุษย์",
         text1: "-",
         text2: "-",
-        name_img: "",
+        name_img: "image/homo_sapiens.png",
         s_wh: "400",
         s_ht: "300",
         year: "ยุคควอทเทอร์นารี (10,000 ปีก่อน)",
@@ -253,17 +253,14 @@ function changeImg(textBtn) {
             document.getElementById('more_info').style.display = 'none'
             document.getElementById('routeA').style.display = 'none'
             document.getElementById('routeB').style.display = 'none'
-            document.getElementById('summary').style.display = 'block'
 
             setTimeout(function () {
-                document.getElementById('summary').style.display = 'block'
-                document.getElementById('summary').style.opacity = 1
-                document.getElementById('main_picture').style.display = 'none'
                 document.getElementById('description').style.opacity = 0
-
-            }, 5700)
-
-
+            }, 18500)
+            setTimeout(function () {
+                document.getElementById('main_picture').style.display = 'none'
+                document.getElementById('summary').style.display = 'block'
+            }, 20000)
         }
 
         image.classList.toggle("hid");
